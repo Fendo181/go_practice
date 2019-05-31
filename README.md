@@ -51,6 +51,13 @@ go version
 go version go1.12.5 darwin/amd64
 ```
 
+### ビルド
+
+- `o`でコンパイルしてできた
+
+```sh
+go build -o hellowold hello.go
+```
 
 
 ### 教材
