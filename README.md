@@ -36,6 +36,22 @@ Go言語を学ぶ為のリポジトリです。
 
 ### SetUp
 
+Macなのでbrewコマンドで簡単に入るぽい
+
+```sh
+ brew install go
+```
+
+よさそう
+
+確認
+
+```sh
+go version
+go version go1.12.5 darwin/amd64
+```
+
+
 
 ### 教材
 
