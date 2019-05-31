@@ -1,10 +1,10 @@
-### Goを学ぶ
+### Practice Go
 
 Go言語を学ぶ為のリポジトリです。
 
 日本のことわざに「郷に入ってはGoに従え」というのがあるように、ここではしっかりGoの文法やお作法を学びます。
 
-### Goはどんな言語なのか?
+### What is Go?
 
 - 2009年1月にGoogleで開発された。
 - 協力でシンプルな言語設計と文法
@@ -33,11 +33,10 @@ Go言語を学ぶ為のリポジトリです。
 - [peco](https://github.com/peco/peco)もGoが使われている
   - 標準入力されたデータをインクリメンタルサーチをして選択したら出力する
 - サクッとCLIツールを作ルるのに適している
--
 
 ### SetUp
 
-Macなのでbrewコマンドで簡単に入るぽい
+Macだとbrewコマンドで簡単に入る。
 
 ```sh
  brew install go
@@ -52,16 +51,16 @@ go version
 go version go1.12.5 darwin/amd64
 ```
 
-### ビルド
+### Build
 
-- `o`でコンパイルしてできた
+- `o`でコンパイルしてできたファイルに名前をつける
 
 ```sh
 go build -o hellowold hello.go
 ```
 
 
-### 教材
+### Document
 
 - [ソフトウェアデザイン 2019年5月号](https://booklog.jp/item/1/B07PZN49RW)
 - [The Go Programming Language](https://golang.org/#)
