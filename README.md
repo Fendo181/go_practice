@@ -59,6 +59,58 @@ go version go1.12.5 darwin/amd64
 go build -o hellowold hello.go
 ```
 
+### Codeing
+
+[Effective Go — プログラミング言語 Go ドキュメント v0.1 documentation](http://go.shibu.jp/effective_go.html)
+
+`go fmt`でコーディングスタイルを整える事ができる。
+
+```sh
+go fmt
+```
+※VSCodeで書く場合は自動で`go fmt`をしてくれているので、便利！
+
+#### エラーチェック
+
+[kisielk/errcheck: errcheck checks that you checked errors.](https://github.com/kisielk/errcheck)
+
+#### メモリを考えた順序に並び替える
+
+アライメント(メモリに載せるデータの並びを意識する)
+
+[mdempsky/maligned: Tool to detect Go structs that would take less memory if their fields were sorted.](https://github.com/mdempsky/maligned)
+
+
+```go
+type A struct {
+    a [4]byte
+    b [3]byte
+    s string
+}
+
+type B struct{
+    a [4]byte
+    s string
+    b [3]byte
+}
+````
+
+GoはC言語と同じようにアライメント(メモリに載せる順番)を意識する原義で、この例ではAとBが同じメモリサイズと思いきや、OSのワードサイズや書き込みの順番によって扱うメモるサイズに差が生じる。
+例えばBに関して、ワードサイズは`8byte`とすると、`string`に必要な数は2ワード(`16byte`)になるので、Aに関しては
+
+`4(a)+16(s)` =20
+
+となる。が、bのアクセス位置を埋める為に更に`4byte`を追加する。`32byte`が次のワードサイズなので
+
+`4(a)+16(s)+4(パディング)+3(b)+8(次のワードサイズを埋める為)` =32
+
+一方でAの場合
+
+`4(a)+3(b)+1(パディング)+8` = 24
+
+となり`8byte`の差が生まれる。これは小さいけど大きめの配列を作る際は無視できない大きさになってしまう。
+
+[Go Meta Linter がサポートするツールまとめ - SideCI TechBlog](http://tech.sideci.com/entry/2017/01/10/110000)
 
 ### Document
 
