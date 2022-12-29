@@ -51,6 +51,14 @@ go version
 go version go1.19.4 darwin/amd64
 ```
 
+### Run
+
+Goで書かれたファイルを実行します。
+
+```go
+go run helloworld.go
+```
+
 ### Build
 
 - `o`でbuildしてできたファイルに名前をつける
