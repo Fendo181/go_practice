@@ -35,6 +35,19 @@ func add(x, y int) int {
 }
 ```
 
+また関数は複数の戻り値の型を指定する事ができます。
+
+```go
+func swap(x, y string) (string, string) {
+	return x, y
+}
+
+func main() {
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+}
+```
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/welcome/1
