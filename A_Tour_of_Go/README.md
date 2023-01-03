@@ -25,9 +25,15 @@ Goの場合は変数名の後ろに型名を書くようにしています。
 func add(x int, y int) int {
 	return x + y
 }
-
 ```
 
+関数の2つ以上の引数が同じ型である場合には最後の型を残して省略して記述ができます。
+
+```go
+func add(x, y int) int {
+	return x + y
+}
+```
 
 ### 参考
 
