@@ -65,6 +65,24 @@ func main() {
 }
 ```
 
+### Variables
+
+Go言語における`var`ステートメントは変数を宣言します。関数の引数のリストと同様に。複数の変数の最後に型を書く事で、変数のリストを宣言します。この場合、`c`, `python` , `java` はboolean で `i` だけint型になる。
+
+```go
+package main
+
+import "fmt"
+
+var c, python , java bool
+
+func main() {
+	var i int
+	fmt.Println(i, c, python, java)
+}
+```
+
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/welcome/1
