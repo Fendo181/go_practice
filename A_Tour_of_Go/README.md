@@ -48,6 +48,23 @@ func main() {
 }
 ```
 
+### Named return values
+
+Goでは戻り値となる変数に名前をつける事ができます。
+名前をつけた戻り値の変数を使うと、 `return` ステートメントに何も書かずに戻すことができます。これを `naked" return` と呼びます。ただし、`naked return`ステートメントは、短い関数でのみ利用すべきです。
+
+```go
+func split(sum int) (x, y int) {
+	x = sum % 17
+	y = sum * 2
+	return
+}
+
+func main() {
+	fmt.Println(split(17))
+}
+```
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/welcome/1
