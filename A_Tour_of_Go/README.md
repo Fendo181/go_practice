@@ -84,7 +84,7 @@ func main() {
 
 ### Short variable declarations
 
-関数の中では、 `var` 宣言の代わりに、短い `:=` の代入文を使い、暗黙的な型宣言ができます。
+関数の中では、`var`宣言の代わりに、短い `:=` の代入文を使い、暗黙的な型宣言ができます。
 
 ```go
 package main
