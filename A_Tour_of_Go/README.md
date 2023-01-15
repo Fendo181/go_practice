@@ -115,6 +115,14 @@ func main() {
 }
 ```
 
+またGoは明示的な型を指定せずに変換した場合には右側の新しい変数は同じ型になります。
+
+```go
+var i int
+j := i // j is an int
+```
+
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/welcome/1
