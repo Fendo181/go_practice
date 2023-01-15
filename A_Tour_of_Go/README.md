@@ -1,4 +1,4 @@
-###  A Tour of Go
+##  A Tour of Go
 
 https://go-tour-jp.appspot.com/list
 
@@ -122,6 +122,24 @@ var i int
 j := i // j is an int
 ```
 
+### Constants
+
+Goで定数を宣言する場合には `const` キーワードを設定する。
+定数は、文字(character)、文字列(string)、boolean、数値(numeric)のみで使えます。また定数は省略形である `:=` は使えない。
+
+```go
+package main
+
+import "fmt"
+
+const Pi = 3.14
+
+func main() {
+	const World = "世界"
+	fmt.Println("Hello", World)
+	fmt.Println("Happy", Pi, "Day")
+}
+```
 
 ### 参考
 
