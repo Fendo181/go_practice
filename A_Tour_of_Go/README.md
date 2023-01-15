@@ -102,6 +102,19 @@ func main() {
 }
 ```
 
+### Type conversions
+
+Goで型変換をする場合は明示的に型を指定して変換する。
+
+```go
+func main() {
+	var x, y int = 3, 4
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+}
+```
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/welcome/1
