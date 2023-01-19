@@ -129,7 +129,6 @@ Goで定数を宣言する場合には `const` キーワードを設定する。
 
 ```go
 package main
-
 import "fmt"
 
 const Pi = 3.14
