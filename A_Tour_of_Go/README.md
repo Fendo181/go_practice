@@ -164,9 +164,9 @@ func needFloat(x float64) float64 {
 }
 
 func main() {
-	fmt.Println(needInt(Small))
-	fmt.Println(needFloat(Small))
-	fmt.Println(needFloat(Big))
+	fmt.Println(needInt(Small)) // 21
+ 	fmt.Println(needFloat(Small)) // 0.2
+	fmt.Println(needFloat(Big)) // 1.267506
 }
 ```
 
