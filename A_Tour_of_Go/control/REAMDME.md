@@ -24,6 +24,22 @@ func main() {
 }
 ```
 
+また、初期化と後処理ステートメントの記述は省略しても処理の内容は同じになる
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	sum := 1
+	for sum < 10 {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+```
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/flowcontrol/1
