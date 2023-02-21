@@ -40,6 +40,21 @@ func main() {
 }
 ```
 
+### Forever Go
+
+ループ条件を省略すれば無限ループを実現する事ができます。
+
+
+```go
+package main
+
+func main() {
+	for {
+	}
+}
+```
+
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/flowcontrol/1
