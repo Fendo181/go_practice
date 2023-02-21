@@ -222,7 +222,44 @@ Hello
 world
 ```
 
+### Stacking Defers
 
+`defer` へ渡した関数が複数ある場合、その呼び出しはスタック( stack )されます。
+呼び出し元の関数がreturnするとき、 `defer` へ渡した関数は `LIFO(last-in-first-out)` の順番で実行されます。
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("counting")
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("done")
+}
+```
+
+実行後
+
+```
+# go run stacking_defers.go
+counting
+done
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+```
 
 ### 参考
 
