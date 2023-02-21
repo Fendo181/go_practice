@@ -171,7 +171,33 @@ func main() {
 		fmt.Println("Too far away")
 	}
 }
+```
 
+### Switch With No Condition
+
+条件のないswitchは、`switch true`と書く事と同じ内容になります。
+Switchの構造はながくりがちな、`if-then-else`のつながりをシンプルにしてくれてます。
+
+
+```go
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+	t := time.Now()
+	switch {
+		case t.Hour() < 12:
+			fmt.Println("Good morning！")
+		case t.Hour() < 17:
+			fmt.Println("Good afternoon.")
+		default:
+			fmt.Println("Good evening.")
+	}
+}
 ```
 
 ### 参考
