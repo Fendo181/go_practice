@@ -200,6 +200,30 @@ func main() {
 }
 ```
 
+### Defer
+
+`defer` ステートメントは、 `defer` へ渡した関数の実行を、呼び出し元の関数の終わり(returnする)まで遅延させるものです
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Println("world")
+	fmt.Println("Hello")
+}
+```
+
+実行後
+```
+# go run defer.go
+Hello
+world
+```
+
+
+
 ### 参考
 
 - https://go-tour-jp.appspot.com/flowcontrol/1
