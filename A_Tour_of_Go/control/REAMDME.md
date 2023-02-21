@@ -54,6 +54,30 @@ func main() {
 }
 ```
 
+### If
+
+Go言語の if ステートメントは、先ほどの for ループと同様に、`括弧 ( )` は不要で、`中括弧 { }` は必要です。
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func sqrt(x float64) string {
+	if x < 0 {
+		// 0より下回って場合は平方根にする
+		return sqrt(-x) + "i"
+	}
+	return fmt.Sprint(math.Sqrt(x))
+}
+
+func main() {
+	fmt.Println(sqrt(2), sqrt(-4))
+}
+```
 
 ### 参考
 
