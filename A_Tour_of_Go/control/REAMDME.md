@@ -125,7 +125,33 @@ func main() {
 		pow(3, 3, 20),
 	)
 }
+```
 
+### Switch
+
+`switch`ステートメントは `if-else`ステートメントの
+シーケンスを短く記述する事ができます。
+他の言語と似ていますが、GoのSwitchは選択されたcaseだけを実行して、**続く全てのcaseは実行されません** 。つまり他の言語で必要な `brake`ステートメントがGoでは自動的に提供されます。
+
+```go
+package main
+
+import (
+	"fmt"
+	"runtime"
+)
+
+func main() {
+	fmt.Print("Go runs on")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OX X.")
+	case "linux":
+		fmt.Println("Linux.")
+	default:
+		fmt.Printf("%s.\n", os)
+	}
+}
 ```
 
 ### 参考
